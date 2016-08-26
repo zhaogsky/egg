@@ -1,0 +1,8 @@
+{
+  "name": "passport-github-and-twitter",
+  "main": "dispatch.js",
+  "scripts": {
+    "dev": "egg-bin dev",
+    "start": "node dispatch.js"
+  }
+}
