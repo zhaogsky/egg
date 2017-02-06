@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <title>egg - 为企业级框架和应用而生</title>
+<meta charset="utf-8">
+<meta name="description" content="为企业级框架和应用而生">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="icon" href="/images/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/css/index.css">
+
+</head>
+<body>
+  <div id="container">
+    <div class="nav">
+  <header>
+    <a href="/zh-cn/" class="nav-logo" alt="egg"><img src="/images/logo.svg"></a>
+    <ul>
+      <li><a href="/zh-cn/intro/" alt="新手指南">新手指南</a></li><li><a href="https://eggjs.org/badgeboard/" alt="插件">插件</a></li><li><a href="/release/" alt="发布记录">发布记录</a></li>
+      <li><iframe src="https://ghbtns.com/github-btn.html?user=eggjs&repo=egg&type=star&count=false" frameborder="0" scrolling="0" width="54px" height="20px"></iframe></li>
+    </ul>
+  </header>
+</div>
+
+    <div class="page-title">
+  <h1>GUIDE</h1>
+  <h2>The best way to know egg</h2>
+</div>
+
+<div class="page-main">
+  <article class="markdown-body">
+    <h1></h1>
+    <h1 id="contribution-guide"><a class="markdown-anchor" href="#contribution-guide">#</a> Contribution Guide</h1>
+<p>If you have any comment or advice, please report your <a href="https://github.com/eggjs/egg/issues" target="_blank" rel="external">issue</a>,
+or make any change as you wish and submit an <a href="https://github.com/eggjs/egg/issues" target="_blank" rel="external">PR</a>.</p>
+<h2 id="reporting-new-issues"><a class="markdown-anchor" href="#reporting-new-issues">#</a> Reporting New Issues</h2>
+<ul>
+<li>Please specify what kind of issue it is.</li>
+<li>Before you report an issue, please search for related issues. Make sure you are not going to open a duplicate issue.</li>
+<li>Explain your purpose clearly in tags(see <strong>Useful Tags</strong>), title, or content.</li>
+</ul>
+<p>Egg group members will confirm the purpose of the issue, replace more accurate tags for it, identify related milestone, and assign developers working on it.
+Tags can be divided into two groups, <code>type</code> and <code>scope</code>.</p>
+<ul>
+<li>type: What kind of issue, e.g. <code>feature</code>, <code>bug</code>, <code>documentation</code>, <code>performance</code>, <code>support</code> ...</li>
+<li>scope: What did you modified. Which files are modified, e.g. <code>core: xx</code>, <code>plugin: xx</code>, <code>deps: xx</code></li>
+</ul>
+<h3 id="useful-tags"><a class="markdown-anchor" href="#useful-tags">#</a> Useful Tags</h3>
+<ul>
+<li><code>support</code>: the issue asks helps from developers of our group. If you need helps to locate and handle problems or have any idea to improve Egg, mark it as <code>support</code>.</li>
+<li><code>bug</code>: if you find a problem which possiblly could be a bug, please tag it as <code>bug</code>. Then our group members will review that issue. If it is confirmed as a bug by our group member, this issue will be tagged as <code>confirmed</code>.
+<ul>
+<li>A confirmed bug will be resolved prior.</li>
+<li>If the bug has negative impact on running online application, it will be tagged as <code>ciritical</code>, which refers to top priority, and will be fixed ASAP!</li>
+<li>A bug will be fixed from lowest necessary version, e.g. A bug needs to be fixed from 0.9.x, then this issue will be tagged as <code>0.9</code>, <code>0.10</code>, <code>1.0</code>, <code>1.1</code>, referring that the bug is required to be fixed in those versions.</li>
+</ul>
+</li>
+<li><code>core: xx</code>: the issue is related to core, e.g. <code>core: loader</code> refers that the issue is related with <code>loader</code> config.</li>
+<li><code>plugin: xx</code>: the issue is related to plugins. e.g. <code>plugin: session</code> refers that the issue is related to <code>session</code> plugin.</li>
+<li><code>deps: xx</code>: the issue is related to <code>dependencies</code>, e.g. <code>deps:egg-cors</code> refers that the issue is related to <code>egg-cors</code></li>
+<li><code>chore: documentation</code>: the issue is about documentation. Need to modify documentation.</li>
+</ul>
+<h2 id="documentation"><a class="markdown-anchor" href="#documentation">#</a> Documentation</h2>
+<p>All features must be submitted along with documentations. The documentations should satify several requirements.</p>
+<ul>
+<li>Documentations must clarify one or more aspects of the feature, depending on the nature of feature: what it is, why it happens and how it works.</li>
+<li>It's better to include a series of procedues to explain how to fix the problem. You are also encourgaed to provide <strong>simple, but self-explanatory</strong> demo.
+All demos should be compiled at <a href="https://github.com/eggjs/examples" target="_blank" rel="external">eggjs/examples</a> repository.</li>
+<li>Please provide essential urls, such as application process, terminology explainations and references.</li>
+</ul>
+<h2 id="submitting-code"><a class="markdown-anchor" href="#submitting-code">#</a> Submitting Code</h2>
+<h3 id="pull-request-guide"><a class="markdown-anchor" href="#pull-request-guide">#</a> Pull Request Guide</h3>
+<p>If you are developer of egg repo and you are willing to contribute, feel free to create a new branch, finish your modification and submit a PR. Egg group will review your work and merge it to master branch.</p>
+<p><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># Create a new branch for development. The name of branch should be semantic, avoiding words like 'update' or 'tmp'. We suggest to use feature/xxx, if the modification is about to implement a new feature.</span></div><div class="line">$ git checkout -b branch-name</div><div class="line"></div><div class="line"><span class="comment"># Run the test after you finish your modification. Add new test cases or change old ones if you feel necessary</span></div><div class="line">$ npm <span class="built_in">test</span></div><div class="line"></div><div class="line"><span class="comment"># If your modification pass the tests, congradulations it's time to push your work back to us. Notice that the commit message should be wirtten in the following format.</span></div><div class="line">$ git add . <span class="comment"># git add -u to delete files</span></div><div class="line">$ git commit -m <span class="string">"fix(role): role.use must xxx"</span></div><div class="line">$ git push origin branch-name</div></pre></td></tr></table></figure></p>
+<p>Then you can create a Pull Request at <a href="https://github.com/eggjs/egg/pulls" target="_blank" rel="external">egg</a></p>
+<p>No one can garantee how much will be remembered about certain PR after some time. To make sure we can easily recap what happened previously, please provide the following information in your PR.</p>
+<ol>
+<li>Need: What function you want to achieve (Generally, please point out which issue is related).</li>
+<li>Updating Reason: Different with issue. Briefly describe your reason and logic about why you need to make such modification.</li>
+<li>Related Testing: Briefly descirbe what part of testing is relevant to your modification.</li>
+<li>User Tips: Notice for Egg users. You can skip this part, if the PR is not about update in API or potential compatibility problem.</li>
+</ol>
+<h3 id="style-guide"><a class="markdown-anchor" href="#style-guide">#</a> Style Guide</h3>
+<p>Eslint can help to identify styling issues that may exist in your code. Your code is required to pass the test from eslint. Run the test locally by <code>$ npm run lint</code>.</p>
+<h3 id="commit-message-format"><a class="markdown-anchor" href="#commit-message-format">#</a> Commit Message Format</h3>
+<p>You are encouraged to use <a href="https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#commit-message-format" target="_blank" rel="external">angular commit-message-format</a> to write commit message. In this way, we could have a more trackable history and an automatically generated changelog.</p>
+<p><figure class="highlight xml"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">type</span>&gt;</span>(<span class="tag">&lt;<span class="name">scope</span>&gt;</span>): <span class="tag">&lt;<span class="name">subject</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">BLANK</span> <span class="attr">LINE</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">BLANK</span> <span class="attr">LINE</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">footer</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>（1）type</p>
+<p>Must be one of the following:</p>
+<ul>
+<li>feat: A new feature</li>
+<li>fix: A bug fix</li>
+<li>docs: Documentation-only changes</li>
+<li>style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)</li>
+<li>refactor: A code change that neither fixes a bug nor adds a feature</li>
+<li>perf: A code change that improves performance</li>
+<li>test: Adding missing tests</li>
+<li>chore: Changes to the build process or auxiliary tools and libraries such as documentation generation</li>
+<li>deps: Updates about dependencies</li>
+</ul>
+<p>（2）scope</p>
+<p>The scope could be anything specifying place of the commit change. For example $location, $browser, $compile, $rootScope, ngHref, ngClick, ngView, etc...</p>
+<p>（3）subject</p>
+<p>Use succinct words to describe what did you do in the commit change.</p>
+<p>（4）body</p>
+<p>Feel free to add more content in the body, if you think subject is not self-explanatory enough, such as what it is the purpose or reasone of you commit.</p>
+<p>（5）footer</p>
+<ul>
+<li><strong>If the commit is a Breaking Change, please note it clearly in this part.</strong></li>
+<li>related issues, like <code>Closes #1, Closes #2, #3</code></li>
+<li>If there is a change about an old feaure or a new feature, please associate <code>doc</code> and <code>egg-init</code>, like <code>eggjs/egg-bin#123</code></li>
+</ul>
+<p>e.g.</p>
+<p><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">fix($compile): [BREAKING_CHANGE] couple of unit tests for IE9</div><div class="line"></div><div class="line">Older IEs serialize html uppercased, but IE9 does not...</div><div class="line">Would be better to expect case insensitive, unfortunately jasmine does</div><div class="line">not allow to user regexps for throw expectations.</div><div class="line"></div><div class="line">Document change on eggjs/egg#123</div><div class="line"></div><div class="line">Closes #392</div><div class="line"></div><div class="line">BREAKING CHANGE:</div><div class="line"></div><div class="line">  Breaks foo.bar api, foo.baz should be used instead</div></pre></td></tr></table></figure></p>
+<p>Look at <a href="https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit" target="_blank" rel="external">these files</a> for more detials.</p>
+<h2 id="release"><a class="markdown-anchor" href="#release">#</a> Release</h2>
+<p>egg uses semantic versioning in release process based on <a href="http://semver.org/lang/zh-CN/" target="_blank" rel="external">semver</a>.</p>
+<h3 id="branch-strategy"><a class="markdown-anchor" href="#branch-strategy">#</a> Branch Strategy</h3>
+<p><code>master</code> branch is the latest stable version. <code>next</code> branch is the next stable version working in progress.</p>
+<ul>
+<li>All new features will be added into <code>master</code> or <code>next</code> branch as well as all bug-fix except security issues. In such way, we can motivate developers to update to the latest stable version.</li>
+<li>If any API is discarded, it should be noted with <code>deprecate</code> in current stable version. The old version of API should be compatiable until the release of next stable version.</li>
+<li><code>master</code> branch doesn't have publish tag. High-level framework can work with stable versions defined by semantic versioning.</li>
+<li><code>next</code> branch is labelled with <code>next</code> tag, high-level framework can use <code>egg@next</code> to test the in-progress version.</li>
+<li>The LTS versions of Egg determined by Milestone. If a version is listed in Milestone, then it is a LTS version. We will patch it if there is any problem with it.</li>
+</ul>
+<h3 id="release-strategy"><a class="markdown-anchor" href="#release-strategy">#</a> Release Strategy</h3>
+<p>In the release of every stable version, there will be a PM who has the following responsibilities in different stages of the release.</p>
+<h4 id="preparation"><a class="markdown-anchor" href="#preparation">#</a> Preparation</h4>
+<ul>
+<li>Set up milestone. Confirm that request is related to milestone. Assign and update issues, like <a href="https://github.com/eggjs/egg/milestone/1" target="_blank" rel="external">1.x milestone</a>.</li>
+<li>Create a <code>next</code> branch from <code>master</code> branch and tag it as <code>next</code>.</li>
+</ul>
+<h4 id="before-release"><a class="markdown-anchor" href="#before-release">#</a> Before Release</h4>
+<ul>
+<li>
+<p>Confirm that performance test is passed and all issues in current Milestone are either closed or can be delayed to later versions.</p>
+</li>
+<li>
+<p>Open a new <a href="https://github.com/nodejs/node/pull/4181" target="_blank" rel="external">Release Proposal MR</a>, and write <code>History</code> as <a href="https://github.com/nodejs/node/blob/master/CHANGELOG.md" target="_blank" rel="external">node CHANGELOG</a>. Don't forget to correct content in documentation which is related to the releasing version. Commits can be generated automatically.
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">$ npm run commits</div></pre></td></tr></table></figure></p>
+</li>
+<li>
+<p>Nominate PM for next stable version.</p>
+</li>
+</ul>
+<h4 id="during-release"><a class="markdown-anchor" href="#during-release">#</a> During Release</h4>
+<p>All tags mentioned above refere to adding tags from npm in <code>package.json</code>.</p>
+<p><figure class="highlight"><table><tr><td class="code"><pre><div class="line">"publishConfig": &#123;</div><div class="line">  "tag": "next"</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+  </article>
+  <aside id="mobileAside" class="toc">
+    <a id="mobileTrigger" href="#" class="mobile-trigger">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </a>
+    <div class="mobile-menu">
+      <ul><li><a href="/zh-cn/intro/" alt="新手指南">新手指南</a></li><li><a href="https://eggjs.org/badgeboard/" alt="插件">插件</a></li><li><a href="/release/" alt="发布记录">发布记录</a></li></ul>
+    </div>
+    <dl><dt>新手指南</dt><dd><ul><li><a href="/zh-cn/intro/index.html">egg 是什么?</a></li><li><a href="/zh-cn/intro/egg-and-koa.html">egg 和 koa</a></li><li><a href="/zh-cn/intro/quickstart.html">快速入门</a></li></ul></dd><dt>基础功能</dt><dd><ul><li><a href="/zh-cn/basics/env.html">运行环境</a></li><li><a href="/zh-cn/basics/config.html">配置</a></li><li><a href="/zh-cn/basics/middleware.html">中间件</a></li><li><a href="/zh-cn/basics/router.html">Router</a></li><li><a href="/zh-cn/basics/controller.html">Controller</a></li><li><a href="/zh-cn/basics/service.html">Service</a></li><li><a href="/zh-cn/basics/schedule.html">定时任务</a></li><li><a href="/zh-cn/basics/extend.html">框架扩展</a></li><li><a href="/zh-cn/basics/app-start.html">启动自定义</a></li></ul></dd><dt>核心功能</dt><dd><ul><li><a href="/zh-cn/core/development.html">本地开发</a></li><li><a href="/zh-cn/core/security.html">安全</a></li><li><a href="/zh-cn/core/httpclient.html">HttpClient</a></li><li><a href="/zh-cn/core/logger.html">日志</a></li><li><a href="/zh-cn/core/error-handling.html">异常处理</a></li><li><a href="/zh-cn/core/i18n.html">国际化</a></li><li><a href="/zh-cn/core/view.html">模板渲染</a></li><li><a href="/zh-cn/core/unittest.html">单元测试</a></li></ul></dd><dt>教程</dt><dd><ul><li><a href="/zh-cn/tutorials/mysql.html">MySQL</a></li><li><a href="/zh-cn/tutorials/restful.html">RESTful API</a></li><li><a href="/zh-cn/tutorials/progressive.html">渐进式开发</a></li></ul></dd><dt>进阶</dt><dd><ul><li><a href="/zh-cn/advanced/loader.html">Loader</a></li><li><a href="/zh-cn/advanced/plugin.html">插件开发</a></li><li><a href="/zh-cn/advanced/framework.html">框架开发</a></li><li><a href="/zh-cn/advanced/cluster.html">多进程模型</a></li><li><a href="/zh-cn/advanced/view-plugin.html">模板插件开发规范</a></li></ul></dd><dt>社区</dt><dd><ul><li><a href="/zh-cn/contributing.html">如何贡献</a></li></ul></dd></dl>
+  </aside>
+</div>
+
+<script>
+var mobileTrigger = document.getElementById('mobileTrigger');
+var mobileAside = document.getElementById('mobileAside');
+mobileTrigger.onclick = function(e) {
+  if (mobileAside.className.indexOf('mobile-show') === -1) {
+    mobileAside.className += ' mobile-show';
+  } else {
+    mobileAside.className = 'toc';
+  }
+};
+</script>
+
+    <div class="footer">
+  <footer>
+    <ul><li><a href="/zh-cn/intro/" alt="新手指南">新手指南</a></li><li><a href="https://eggjs.org/badgeboard/" alt="插件">插件</a></li><li><a href="/release/" alt="发布记录">发布记录</a></li></ul>
+    <div class="license">Released under the MIT License <a href="https://github.com/eggjs"><img src="/images/github.svg"/></a></div>
+  </footer>
+</div>
+
+  </div>
+</body>
+</html>
