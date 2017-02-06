@@ -24,7 +24,6 @@ copy_files() {
   copy_release || exit $?
   cp CONTRIBUTING.md docs/source/contributing.md || exit $?
   cp CONTRIBUTING.zh-CN.md docs/source/zh-cn/contributing.md || exit $?
-  cp MEMBER_GUIDE.md docs/source/member_guide.md || exit $?
 }
 
 server() {
@@ -36,6 +35,7 @@ server() {
 deploy() {
   copy_files || exit $?
   npm_install || exit $?
+  rm -rf docs/public
   hexo --cwd docs generate --force || exit $?
   import_ghpages || exit $?
 }
